@@ -13,7 +13,7 @@ program VARCHAR(50)
 );
 DESC students;
 
-#Inserting Values in table students
+#Inserting Values into table students
 INSERT INTO students(studen_id, name, age, gender, enrollment_date, program)
 VALUES
     (345, 'Erick Muthama', 25, 'M', '2024-02-12', 'Data Science'),
@@ -25,10 +25,10 @@ VALUES
 # Correcting my column name studen_id to student_id
 ALTER TABLE students rename column studen_id to student_id;
 
-# Selecting students who are enrolled data science program
+# Selecting students who are enrolled in a data science program
 select * from students where program='Data Science';
 
-# Calculating the totla number of student
+# Calculating the total number of student
 SELECT COUNT(*) AS `Total Students` FROM students;
 
 # Finding the Current Date
@@ -44,7 +44,7 @@ FROM students
 GROUP BY program
 ORDER BY `Number of Students` DESC;
 
-# Select the youngest the student
+# Select the youngest student
 SELECT name, age
 FROM students
 ORDER BY age ASC
